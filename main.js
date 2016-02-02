@@ -33,7 +33,6 @@ myApp.controller('MainCtrl', ['$scope', '$sce', function($scope, $sce) {
 		itunes: "https://itunes.apple.com/us/app/perfection-perfect-pitch-ear/id980947147?mt=8",
 		android: "https://play.google.com/store/apps/details?id=me.benjipelletier.perfectionfree"}
   	]	
-
   	var dPast = new Date("09/19/1997");
   	var dCurr = new Date();
   	$scope.age = Math.floor((dCurr-dPast)/(3.1556926*Math.pow(10,10)));
