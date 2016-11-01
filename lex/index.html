@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="mainApp" ng-controller="mainCtrl">
+	<head>
+		<title>AMM + BMP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="massshootings2015.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<script type="text/javascript" src="../angular.min.js"></script>
+		<script type="text/javascript" src="massshootings2015.js"></script>
+
+		    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		    <script type="text/javascript">
+    		google.load("visualization", "1", {packages:["geochart"]});
+		    </script>
+
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="black-bg" >
+		<h1>Countdown to February 27th  <small>2016</small></h1>
+
+
+		<div class="centerDiv" >
+						
+
+  		  	<!-- KILLED -->
+		    <div class="card card-block">
+		      <h1 class="card-title">Hey Lex,</h1>
+		      <p>Soooo this is a website, for you, for our anniversary. It updates every day until the 27th. I love you 💜.</p>
+		      <div class="card card-block inside-card">
+		        <p class="card-text">We have been dating for <span class="info">{{started | number}}</span> days. That's <span class="info">{{year | singleDecimal}}%</span> of a year!</p>
+			  </div>
+			  <div class="card card-block inside-card">
+			    <p class="card-text">Our anniversary is in <span class="info">{{ann+1 | number}}</span> days! That's <span class="info">{{(ann+1)/started | number}}%</span> of the time we have been dating!</p>
+			  </div>
+			  <div class="card card-block inside-card">
+			    <p class="card-text">We break up in <span class="info">{{end | number}}</span> days 😢. That means a progress bar of our relationship looks kinda like this</p>
+			    <progress class="progress progress-striped progress-success" ng-value="started/total*100" max="100">25sdfsdf%</progress>
+			    <span class="info">{{started/total*100 | singleDecimal}}%</span>
+
+			  </div>
+			    <div class="card card-block inside-card">
+			    	<span class="info">*</span>
+			    <p class="card-text">{{love[ann+1]}}</p> <span class="info">*</span>
+			</div>
+
+				</div>
+			
+		<p class="footer">Love,  <a class="footer" href="photo.jpg" target="_blank">Benj</a></p>
+
+</div>
+
+
+
+		<script src="../assets/js/jquery.min.js"></script>
+</body>
