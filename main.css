@@ -1,3 +1,4 @@
+/* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,6 +16,107 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: 'Open Sans', sans-serif;
   vertical-align: baseline;
+
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+.side-projects {
+	background-color: white;
+	float:left;
+	width:100%;
+}
+
+h1 {
+	font-weight: bold;
+	color: #333333;
+}
+.title {
+	font-size: 3.25rem;
+  margin-bottom:2rem;
+  font-weight: bold;
+}
+
+button {
+  text-decoration: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255,0.5);
+  width:5rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+  margin-left:1.5rem;
+}
+
+.btn-primary {
+  background-color: rgba(51, 51, 51, 1) !important;
+  border: none !important;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.btn-primary:hover {
+  background-color: rgba(51, 51, 51, 0.9) !important;
+}
+
+.header {
+	text-align: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	background-color: #f6f6f6;
+}
+
+.main {
+  padding-top:5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  width: 400px;  /* Or whatever */
+  height: 600px; /* Or whatever */
+  margin: auto;  /* Magic! */
+  background-color: #f6f6f6;
+  border: 2px solid rgba(56, 56, 56, .1);
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  margin-right:1rem;
+  margin-left:1rem;
+  padding:1rem;
+}
+
+li {
+    list-style-type: circle;
+    margin-left:2rem;
+}
+
