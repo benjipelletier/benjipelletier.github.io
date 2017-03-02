@@ -1,7 +1,6 @@
 var myApp = angular.module('myApp',[]);
 $(document).ready(function(){
 	$('head').append('<link rel="stylesheet" href="projects.css" type="text/css" />');
-	$("#projectsHtml").load("projects.html");
 });
 
 myApp.controller('MainCtrl', ['$scope', function($scope) {

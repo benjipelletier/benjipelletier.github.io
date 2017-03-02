@@ -158,6 +158,14 @@ li {
   transition: .5s ease;
 }
 
+.sublime {
+  width: 100%;
+  height: 100%;
+}
+
+.tab, .bar {
+  font-family: calibri;
+}
 .projects-center {
   bottom: 0;
   top:100px;
@@ -168,12 +176,6 @@ li {
   /*box-shadow: 5px 5px 10px gray;*/
 }
 
-.projects-code {
-  width:94%;
-  top: 0;
-  left: 5.5%;
-  position: absolute;
-}
 
 pre {
   color: white !important;
