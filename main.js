@@ -1,9 +1,22 @@
 var myApp = angular.module('myApp',[]);
+$(document).ready(function(){
+	$('head').append('<link rel="stylesheet" href="projects.css" type="text/css" />');
+	$("#projectsHtml").load("projects.html");
+});
 
+myApp.controller('MainCtrl', ['$scope', function($scope) {
+	$scope.tooltip = "32";
+	$scope.openProjects = function() {
+		$( ".projects-container" ).addClass( "projects-center" );
+		$(".body-container").addClass("body-upper");
 
+	}
+}]);
+
+/*
 myApp.controller('MainCtrl', ['$scope', '$sce', function($scope, $sce) {
 
-	//Videos - just change the youtube id
+	//Videos - change the youtube id
 	$scope.vidCol1 = [
 	  	{title: "Short Film - Stopwatch", url: $sce.trustAsResourceUrl("https://www.youtube.com/embed/BWCMA80PjYc")},
 	  	{title: "Short Film - The Painting", url: $sce.trustAsResourceUrl("https://www.youtube.com/embed/dMysmP1Bz3A")},
@@ -36,48 +49,5 @@ myApp.controller('MainCtrl', ['$scope', '$sce', function($scope, $sce) {
   	var dPast = new Date("09/19/1997");
   	var dCurr = new Date();
   	$scope.age = Math.floor((dCurr-dPast)/(3.1556926*Math.pow(10,10)));
-}]);
-/*
-Math.toDeg = function(rad)
- {
- return rad*(180/Math.PI);
- }
- 
-Math.toRad = function(deg)
- {
- return deg * (Math.PI/180);
- }
-
-myApp.controller('PathDiffCtrl', ['$scope', function($scope) {
-	$scope.vars = ["","","",""];
-
-	$scope.update = function() {
-		var found = 0;
-		var solve = -1;
-		for (i in $scope.vars) {
-			if ($scope.vars[i] == "") {
-				solve = i;
-				found++;
-			}
-		}
-		if (found >= 2) {
-			solve = -1;
-		}
-
-
-		if (solve == -1) {
-			$scope.answer = "Fill in all, except one, box";
-		} else if (solve == 0) {
-			$scope.answer = ($scope.vars[2]*$scope.vars[3])/(Math.sin(Math.toRad($scope.vars[1])));
-		} else if (solve == 1) {
-			var presin = ($scope.vars[2]*$scope.vars[3])/$scope.vars[0];
-			$scope.answer = Math.toDeg(Math.asin(presin));
-		} else if (solve == 2) {
-			$scope.answer = ($scope.vars[0]*(Math.sin(Math.toRad($scope.vars[1]))))/$scope.vars[3];
-		} else if (solve == 3) {
-			$scope.answer = ($scope.vars[0]*(Math.sin(Math.toRad($scope.vars[1]))))/$scope.vars[2]
-		}
-
-	}
 }]);
 */

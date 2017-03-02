@@ -1,0 +1,67 @@
+
+.tab {
+  width: 135px;
+  float: left;
+  background: #2D2D2D;
+  color: white;
+  border-bottom: 5px solid #E74C3C;
+  padding-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin: auto;
+}
+
+.tab-flow {
+  width: 100%;
+  float: left;
+  background: #222222;
+  padding-right: 5px;
+}
+
+.bar {
+  width: 100%;
+  float: left;
+  background: linear-gradient(#F5F5F5, #D4D4D4);
+  color: #333333;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: auto;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 8px;
+}
+
+.c-red {
+  background: #FC625D;
+}
+
+.c-yellow {
+  background: #FDBC40;
+}
+
+.c-green {
+  background: #34C84A;
+}
+
+.text-box {
+  width: 100%;
+  padding-left: 3px;
+  height: 400px;
+  border: none;
+  background: #1A1A1A;
+  color: white;
+  
+}
+
+.text-box:focus {
+  outline: none;
+}
