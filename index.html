@@ -1,166 +1,68 @@
 
 <!DOCTYPE HTML>
 
-<html ng-app="myApp">
-	<head>
-		<title>benjipelletier.me</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script type="text/javascript" src="angular.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
-	</head>
-	<body ng-controller="MainCtrl">
+<html ng-app="mainApp">
 
-		<!-- Header -->
-			<div id="header">
+<head>
+	<title>benjipelletier.me</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/main.css" />
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="assets/angular.min.js"></script>
+	<script type="text/javascript" src="assets/main.js"></script>
+</head>
+<body ng-controller="MainController">
+	<div class="container">
+		<h1>Hello</h1>
+		<!-- Cards -->
+		<div class="card-container">
 
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://twitter.com/breadedturtle" class="icon fa-linkedin-square"><span target="_blank" class="label">LinkedIn</span></a></li>
-							<li><a href="https://twitter.com/breadedturtle" class="icon fa-twitter"><span target="_blank" class="label">Twitter</span></a></li>
-
-							<li><a href="#" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-
-							<li><a href="mailto:pelletierbenji@gmail.com" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-
+			<div class="card horizontal hoverable" ng-repeat="project in sideProjects">
+				<div class="card-stacked">
+					<div class="card-content">
+						<span class="card-title">{{project.title}}</span>
+						<p class="flow-text">{{project.desc}} I am a very simple card. I am good at containing small bits of information.</p>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs">
+								<li class="tab col s6"><a href="#test1">Test 1</a></li>
+								<li class="tab col s6"><a class="active" href="#test2">Test 2</a></li>
+							</ul>
+						</div>
+						<div id="test1" class="col s12">Test 1</div>
+						<div id="test2" class="col s12">Test 2</div>
+					</div>
 				</div>
-
+				<div class="card-image">
+					<img ng-src="{{project.img}}">
+				</div>
 			</div>
 
-		<!-- Main -->
-			<div id="main">
+		</div>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+		<!-- Experience -->
+		<ul class="collapsible" data-collapsible="accordion">
+			<li>
+				<div class="collapsible-header active"><i class="material-icons">filter_drama</i>First</div>
+				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+			</li>
+			<li>
+				<div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+			</li>
+			<li>
+				<div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+			</li>
+		</ul>
 
-							<header>
-								<h2 class="alt">Welcome to <strong>benjipelletier.me</strong></h2>
-								<p>My name is Benji Pelletier. This is where I showcase many of my passions: programming, mobile app development, video editing, visual effects, and motion graphics.</p>
-							</header>
-
-							<footer>
-								<a href="#about" class="button scrolly">Continue</a>
-							</footer>
-
-						</div>
-					</section>
-
-									<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-							<!--
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							-->
-							<p>I am currently {{age}} years old and studying abroad at Singapore American School. When I was fourteen I started a small business where I provided video editing and conversion services. Since then I have expanded it to more areas of my interest and have developed this website to showcase all of my work.</p>
-
-						</div>
-					</section>
-
-				<!-- Video Editing -->
-					<section id="portfolio" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Visual Media</h2>
-							</header>
-
-							<p>Video editing, visual effects, and motion graphic pieces.</p>
-
-							<div class="row">
-								<!-- Column 1 -->
-								<div class="4u 12u$(mobile)">
-									<article class="item" ng-repeat="item in vidCol1 track by $index">
-										<iframe class="image fit" src="{{item.url}}" frameborder="0" allowfullscreen></iframe>
-										<header>
-											<h3>{{item.title}}</h3>
-										</header>
-									</article>
-								</div>
-								<!-- Column 2 -->
-								<div class="4u 12u$(mobile)">
-									<article class="item" ng-repeat="item in vidCol2 track by $index">
-										<iframe class="image fit" src="{{item.url}}" frameborder="0" allowfullscreen></iframe>
-										<header>
-											<h3>{{item.title}}</h3>
-										</header>
-									</article>
-								</div>
-								<!-- Column 3 -->
-								<div class="4u$ 12u$(mobile)">
-									<article class="item" ng-repeat="item in vidCol3 track by $index">
-										<iframe class="image fit" src="{{item.url}}" frameborder="0" allowfullscreen></iframe>
-										<header>
-											<h3>{{item.title}}</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-						</div>
-					</section>
-				<!-- App Development-->
-					<section id="app" class="three">
-						<div class="container">
-
-							<header>
-								<h2>Mobile App Development</h2>
-							</header>
-
-							<p>Mobile apps I have developed and published to the iTunes Store and Google Play Store</p>
-
-							<div class="row">
-								<!-- Column 1 -->
-								<div class="6u 12u$(mobile)" ng-repeat="item in apps track by $index">
-									<article class="item app-container">
-										<img class="image fit app-img tilt" ng-src="images/{{item.url}}" />
-										<h3 class="app-name">{{item.title}}</h3>
-										<header>
-											<h3 class="app-info">Available on iOS and Android</h3>
-											<a href="{{item.itunes}}" class="button app-button">iTunes App Store</a>
-											<a href="{{item.android}}" class="button app-button">Google Play Store</a>
-										</header>
-									</article>
-								</div>
-							</div>
-						</div>
-					</section>
-
-			
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact <a href="mailto:pelletier40975@sas.edu.sg">me</a></h2>
-							</header>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>Created by Benji Pelletier</li><li>2012 - 2015</a></li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+	</div>
+</div>
+</body>
 </html>
