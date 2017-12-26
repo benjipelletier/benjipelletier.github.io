@@ -1,35 +1,47 @@
+<!DOCTYPE HTML>
 
-    <!DOCTYPE HTML>
+<html ng-app="mainApp">
 
-    <html ng-app="mainApp">
+<head>
+    <title>benjipelletier.me</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lobster" rel="stylesheet">
+    <script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/angular.min.js"></script>
+    <script type="text/javascript" src="assets/main.js"></script>
+</head>
 
-    <head>
-        <title>benjipelletier.me</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/main.css" />
-        <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Catamaran|Lobster" rel="stylesheet">
-        <script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
-        <script type="text/javascript" src="assets/angular.min.js"></script>
-        <script type="text/javascript" src="assets/main.js"></script>
-    </head>
-    <body ng-controller="MainController">
-        <div class="container">
-            <div class="title-container">
-              <h1>Benjamin Pelletier</h1>
-            </div>
-            <!-- Cards -->
+<body ng-controller="MainController">
+    <div class="title-container">
+        <h1>Benjamin Pelletier</h1>
+    </div>
+    <!-- Cards -->
+
+    <div class="row">
+        <div class="col s12 tab-container">
+            <ul class="tabs">
+                <li class="tab  col s4" ng-click="changeTab(0)"><a class="active" href="#test1">Side Projects</a>
+                </li>
+                <li class="tab  col s4" ng-click="changeTab(1)"><a href="#test2">Work Experience</a>
+                </li>
+                <li class="tab  col s4" ng-click="changeTab(2)"><a href="#test3">Resume</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12 sideProjs" ng-show="currTab == 0">
             <div class="card-container">
                 <div ng-repeat="project in sideProjects">
                     <div class="badge-container" ng-style="{'display': (blurr ? 'block' : 'none')}" ng-mouseleave="blurr=false">
-                        <a ng-href="{{project.links[0]}}" ><img class="ios-badge" src="images/app-store-badge.svg"/> </a>
-                        <a ng-href="{{project.links[1]}}"><img class="android-badge" src="images/google-play-badge.svg" /></a>
+                        <a ng-href="{{project.links[0]}}"><img class="ios-badge" src="images/app-store-badge.svg" /> </a>
+                        <a ng-href="{{project.links[1]}}"><img class="android-badge" src="images/google-play-badge.svg" />
+                        </a>
                     </div>
-                    <div class="card horizontal hoverable"  ng-class="{'blurred-card': blurr, 'not-blurred': !blurr}">
+                    <div class="card horizontal hoverable" ng-class="{'blurred-card': blurr, 'not-blurred': !blurr}">
                         <a class="left-container" ng-href="{{project.links.length==1 ? project.links[0] : ''}}" ng-click="blurr=project.links.length==2">
                             <div class="left-border">
                                 <i class="material-icons right">launch</i>
@@ -51,20 +63,34 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Experience -->
-            <ul class="collapsible" data-collapsible="accordion">
-                <li ng-repeat="job in workExp">
-                    <div class="collapsible-header"><img class="job-img" ng-src="{{job.img}}">{{job.company}} ({{job.position}})</div>
-                    <div class="collapsible-body"><span>{{job.desc}}</span></div>
-                </li>
-            </ul>
+        </div>
+        <div class="col s12 workExp" ng-show="currTab == 1">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/123.jpg">
+                            <span class="card-title">Card Title</span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">launch</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class="container resume-container">
-            <object data="/images/resume.pdf" type="application/pdf">
-   <p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: <a href="https://drive.google.com/file/d/1VZMx80ub6NPN8jSHRey1IU-g7GHHey96/view">Download PDF</a>.</p>
-</object>
+        <div class="col s12 resumeCont" ng-show="currTab == 2">
+            <object data="images/resume.pdf" type='application/pdf' width="100%" height="100%">
+                <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="myfile.pdf">click here to
+        download the PDF file.</a>
+                </p>
+            </object>
         </div>
-    </body>
-    </html>
+    </div>
+    <!-- Experience -->
+
+</body>
+
+</html>

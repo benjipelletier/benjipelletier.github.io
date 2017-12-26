@@ -1,20 +1,10 @@
 body {
-    background-color: lightgray;
-    
+    background-color: #ecf0f1;
 }
 
 body .container {
     width: 100%;
     min-height: 100vh;
-}
-
-.resume-container {
-    margin: 0 !important;
-    height: 100vh;
-}
-.resume-container object {
-    width: 100vw;
-    height: 100%;
 }
 
 .title-container {
@@ -25,11 +15,13 @@ body .container {
 h1 {
     font-weight: 900 !important;
 }
+
 .card-container {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+
 }
 
 .card-content {
@@ -61,7 +53,7 @@ h1 {
 }
 
 .collapsible {
-	width: 300px;
+	background-color: white;
 }
 
 .job-img {
@@ -140,4 +132,35 @@ h1 {
     position: relative;
     top: 20%;
     margin: 10px;
+}
+
+.tabs {
+    background-color: #ecf0f1 !important;
+    width: 100% !important;
+}
+
+.resumeCont {
+    height: 100vh;
+}
+
+ .tabs .tab a{
+     transition: all 0.3s ease !important;
+    color:#000 !important;
+} 
+
+.tabs .tab a:hover {
+    background-color: lightgray !important;
+    color:#000 !important;
+} 
+
+.tabs .tab a.active {
+    color:firebrick !important;
+} 
+
+.tabs .indicator {
+    background-color: #333 !important;
+}
+
+.halfway-fab {
+    background-color: firebrick !important;
 }

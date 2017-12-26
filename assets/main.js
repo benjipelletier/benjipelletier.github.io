@@ -32,4 +32,15 @@ $scope.workExp = [
   {company: "Genesys", position: "Font End Developer", img: "images/genesys.png",
   desc: "klmao oikejhkdf sdjf skdfn sd "}
 ];
+    $scope.currTab = 0;
+    $scope.changeTab = function(tab){
+        $scope.currTab = tab;
+    }
 }]);
+
+ $(document).ready(function(){
+     
+    $('ul.tabs').tabs({
+        swipeable: true
+    });
+  });
