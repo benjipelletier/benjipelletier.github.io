@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html ng-app="mainApp">
 
 <head>
@@ -17,6 +16,7 @@
 </head>
 
 <body ng-controller="MainController">
+    <div id="mainWrapper">
     <div class="title-container">
         <h1>Benjamin Pelletier</h1>
     </div>
@@ -33,6 +33,7 @@
                 </li>
             </ul>
         </div>
+        <!-- Side Projects -->
         <div class="col s12 sideProjs" ng-show="currTab == 0">
             <div class="card-container">
                 <div ng-repeat="project in sideProjects">
@@ -41,7 +42,7 @@
                         <a ng-href="{{project.links[1]}}"><img class="android-badge" src="images/google-play-badge.svg" />
                         </a>
                     </div>
-                    <div class="card horizontal hoverable" ng-class="{'blurred-card': blurr, 'not-blurred': !blurr}">
+                    <div class="card card-sp horizontal hoverable" ng-class="{'blurred-card': blurr, 'not-blurred': !blurr}">
                         <a class="left-container" ng-href="{{project.links.length==1 ? project.links[0] : ''}}" ng-click="blurr=project.links.length==2">
                             <div class="left-border">
                                 <i class="material-icons right">launch</i>
@@ -49,14 +50,14 @@
                         </a>
 
                         <div class="card-stacked">
-                            <div class="card-content">
-                                <span class="card-title">{{project.title}}</span>
+                            <div class="card-content card-content-sp">
+                                <span class="card-title card-title-sp">{{project.title}}</span>
                                 <p class="flow-text card-desc">{{project.desc}} </p>
                             </div>
 
                         </div>
 
-                        <div class="card-image">
+                        <div class="card-image card-image-sp">
                             <img class="hoverable z-depth-1" ng-src="{{project.img}}" />
                         </div>
 
@@ -64,32 +65,57 @@
                 </div>
             </div>
         </div>
+        <!-- Experience -->
         <div class="col s12 workExp" ng-show="currTab == 1">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
+            
+            <div class="card-container">
+                    <div class="card card-we" ng-repeat="work in workExp">
                         <div class="card-image">
-                            <img src="images/123.jpg">
-                            <span class="card-title">Card Title</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">launch</i></a>
+                            <iframe class="job-map" ng-src="{{work.api_src}}">
+  </iframe>
+
+                            <a class="btn-floating halfway-fab waves-effect waves-light" ng-href="{{work.link}}" target="_blank"><i class="material-icons">launch</i></a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <img class="job-img" src="{{work.img}}">
+                            <p class="card-desc">{{work.desc}}</p>
                         </div>
                     </div>
-                </div>
             </div>
 
         </div>
+        <!-- Resume -->
         <div class="col s12 resumeCont" ng-show="currTab == 2">
             <object data="images/resume.pdf" type='application/pdf' width="100%" height="100%">
-                <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="myfile.pdf">click here to
-        download the PDF file.</a>
+                <p>Failed to load... <a href="/images/resume.pdf" download>click here to
+        download my resume.</a>
                 </p>
             </object>
         </div>
     </div>
-    <!-- Experience -->
+        <div class="push"></div>
+    </div>
+    <!-- Footer -->
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l4  s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">code</i>Github</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">link</i>LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">play_arrow</i>Youtube</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2012 - 2017 Made with &lt;/> by Benjamin Pelletier
+            <a class="grey-text text-lighten-4 right" href="mailto:pelletierbenji@gmail.com">@me</a>
+            </div>
+          </div>
+        </footer>
 
 </body>
 

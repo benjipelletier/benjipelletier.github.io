@@ -1,10 +1,11 @@
-body {
-    background-color: #ecf0f1;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-body .container {
+body {
+    background-color: #ecf0f1;
     width: 100%;
-    min-height: 100vh;
 }
 
 .title-container {
@@ -24,12 +25,12 @@ h1 {
 
 }
 
-.card-content {
+.card-content-sp {
     padding-top: 10px !important;
     height: 100%;
 }
 
-.card {
+.card-sp {
     transition: all 2s ease;
     width: 400px;
 	margin: 10px !important;
@@ -37,13 +38,13 @@ h1 {
 }
 
 
-.card-image {
+.card-image-sp {
     width: 90px;
     bottom: 0;
     right: 0;
 }
 
-.card-image img {
+.card-image-sp img {
     position: absolute !important;
     width: 70% !important;
     margin: auto;
@@ -52,17 +53,7 @@ h1 {
 
 }
 
-.collapsible {
-	background-color: white;
-}
-
-.job-img {
-	width: 40px;
-	height: 40px;
-}
-
-
-.card a {
+.card-sp a {
 	text-decoration: none;
 	color: inherit;
 }
@@ -86,7 +77,7 @@ h1 {
     color: white;
     right: 7px;
 }
-.card:hover .left-border {
+.card-sp:hover .left-border {
     width: 40px;
 }
 
@@ -95,14 +86,14 @@ h1 {
     filter: blur(4px);
 }
 
-.card-title {
+.card-title-sp {
 	font-weight: 300 !important;
     font-size: 1.4em !important;
     margin-bottom: 0 !important;
 }
 
 .card-desc {
-    font-weight: 200 !important;
+    font-weight: 300 !important;
     font-size: 1em !important;
     color: gray !important;
     margin: 0 !important;
@@ -155,7 +146,7 @@ h1 {
 
 .tabs .tab a.active {
     color:firebrick !important;
-} 
+}  
 
 .tabs .indicator {
     background-color: #333 !important;
@@ -163,4 +154,53 @@ h1 {
 
 .halfway-fab {
     background-color: firebrick !important;
+}
+
+.card-we {
+    width: 400px;
+}
+
+.job-img {
+	width: 150px;
+    margin-bottom: 10px
+}
+
+.job-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.page-footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: firebrick !Important;
+  padding: 0 !important;
+}
+
+#mainWrapper {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -197px;
+}
+
+.push {
+    height: 197px;
+}
+.white-text {
+        font-weight: 300 !important;
+}
+
+.grey-text {
+    font-weight: 300 !important;
+    line-height: 1.3em;
+}
+
+.grey-text:hover {
+     text-decoration: underline;
+}
+
+.grey-text i {
+    height: 10px;
 }
