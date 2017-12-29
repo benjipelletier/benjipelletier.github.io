@@ -23,7 +23,8 @@
     <!-- Cards -->
 
     <div class="row">
-        <div class="col s12 tab-container">
+        <div class="col s12 tab-outside">
+            <div class="tab-container">
             <ul class="tabs">
                 <li class="tab  col s4" ng-click="changeTab(0)"><a class="active" href="#test1">Side Projects</a>
                 </li>
@@ -32,6 +33,7 @@
                 <li class="tab  col s4" ng-click="changeTab(2)"><a href="#test3">Resume</a>
                 </li>
             </ul>
+            </div>
         </div>
         <!-- Side Projects -->
         <div class="col s12 sideProjs" ng-show="currTab == 0">
@@ -43,7 +45,7 @@
                         </a>
                     </div>
                     <div class="card card-sp horizontal hoverable" ng-class="{'blurred-card': blurr, 'not-blurred': !blurr}">
-                        <a class="left-container" ng-href="{{project.links.length==1 ? project.links[0] : ''}}" ng-click="blurr=project.links.length==2">
+                        <a class="left-container" ng-href="{{project.links.length==1 ? project.links[0] : ''}}" ng-click="blurr=project.links.length==2" target="_blank">
                             <div class="left-border">
                                 <i class="material-icons right">launch</i>
                             </div>
@@ -77,7 +79,7 @@
                             <a class="btn-floating halfway-fab waves-effect waves-light" ng-href="{{work.link}}" target="_blank"><i class="material-icons">launch</i></a>
                         </div>
                         <div class="card-content">
-                            <img class="job-img" src="{{work.img}}">
+                            <img class="job-img" ng-src="{{work.img}}">
                             <p class="card-desc">{{work.desc}}</p>
                         </div>
                     </div>
@@ -102,9 +104,9 @@
               <div class="col l4  s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">code</i>Github</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">link</i>LinkedIn</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons left">play_arrow</i>Youtube</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/benjipelletier" target="_blank"><i class="material-icons left">code</i>Github</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/benjaminpelletier" target="_blank"><i class="material-icons left">link</i>LinkedIn</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/user/breadedturtle" target="_blank"><i class="material-icons left">play_arrow</i>Youtube</a></li>
                 </ul>
               </div>
             </div>
@@ -112,7 +114,7 @@
           <div class="footer-copyright">
             <div class="container">
             © 2012 - 2017 Made with &lt;/> by Benjamin Pelletier
-            <a class="grey-text text-lighten-4 right" href="mailto:pelletierbenji@gmail.com">@me</a>
+            <a class="grey-text text-lighten-4 right" href="mailto:pelletierbenji@gmail.com">contact</a>
             </div>
           </div>
         </footer>

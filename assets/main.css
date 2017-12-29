@@ -204,3 +204,18 @@ h1 {
 .grey-text i {
     height: 10px;
 }
+.tab-outside {
+
+}
+.tab-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sideProjs, .workExp, .resumeCont {
+    margin-top: 20px;
+}
+.card-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
