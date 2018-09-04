@@ -30,7 +30,9 @@ mainApp.controller('MainController', ['$scope', '$sce', function($scope, $sce) {
 
 $scope.workExp = [
   {company: "Genesys", position: "Font End Developer", link: "http://www.genesys.com/", img: "images/genesys.png",
-  desc: "Developed numerous features and fixes for Genesys's GWT-based call centre management system including a dynamically adjustable schedule for users' data. Gained experience in unit and automated Java testing for various features on GWT applications.", api_src: $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?q=Genesys,Markham&zoom=9&key=AIzaSyAmMXQiUtgnHPVW_M2h_zgbDYBAP2ySgpA")}
+  desc: "Developed numerous features and fixes for Genesys's GWT-based call centre management system including a dynamically adjustable schedule for users' data. Gained experience in unit and automated Java testing for various features on GWT applications.", api_src: $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?q=Genesys,Markham&zoom=9&key=AIzaSyAmMXQiUtgnHPVW_M2h_zgbDYBAP2ySgpA")},
+  {company: "Freshii", position: "Software Developer", link: "http://www.freshii.com/", img: "images/freshii.png",
+  desc: "Designed and implemented all analytical metrics for Freshii's iOS, Android, and Web online ordering platforms. Built out dynamic and responsive content pages using Vue.js and the Prismic CMS. Created a Facebook chat bot for online ordering using Node.js, Express.js, and Google Dialogflow. Helped architect various CI/CD processes to accommodate Agile practices. Improved product management skills by overlooking and directing 3rd party contractors", api_src: $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?q=Freshii,Rosedale&zoom=7&key=AIzaSyAmMXQiUtgnHPVW_M2h_zgbDYBAP2ySgpA")}
 ];
     $scope.currTab = 0;
     $scope.changeTab = function(tab){
