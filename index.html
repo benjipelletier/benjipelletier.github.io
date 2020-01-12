@@ -2,7 +2,7 @@
 <html ng-app="mainApp">
 
 <head>
-    <title>benjipelletier.me</title>
+    <title>benjaminpelletier.me</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/main.css" />
@@ -18,23 +18,13 @@
 <body ng-controller="MainController">
     <div id="mainWrapper">
     <div class="title-container">
-        <h1>Benjamin Pelletier</h1>
+        <h1>Benji Pelletier</h1>
     </div>
     <!-- Cards -->
 
     <div class="row">
-        <div class="col s12 tab-outside">
-            <div class="tab-container">
-            <ul class="tabs">
-                <li class="tab  col s6" ng-click="changeTab(0)"><a class="active" href="#sideProjs">Side Projects</a>
-                </li>
-                <li class="tab  col s6" ng-click="changeTab(1)"><a href="#workExp">Work Experience</a>
-                </li>
-            </ul>
-            </div>
-        </div>
         <!-- Side Projects -->
-        <div class="col s12 sideProjs" ng-show="currTab == 0">
+		<div class="col s12 sideProjs">
             <div class="card-container">
                 <div ng-repeat="project in sideProjects">
                     <div class="badge-container" ng-style="{'display': (blurr ? 'block' : 'none')}" ng-mouseleave="blurr=false">
@@ -66,7 +56,7 @@
             </div>
         </div>
         <!-- Experience -->
-        <div class="col s12 workExp" ng-show="currTab == 1">
+		<div class="col s12 workExp" >
             
             <div class="card-container">
                     <div class="card card-we" ng-repeat="work in workExp">
